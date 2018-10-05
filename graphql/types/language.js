@@ -1,11 +1,8 @@
-import {
-    GraphQLObjectType,
-    GraphQLString
-} from 'graphql';
+const GraphQL = require('graphql')
+const GraphQLObjectType = GraphQL.GraphQLObjectType
+const GraphQLString = GraphQL.GraphQLString
 
-import models from '../../models/index.js';
-
-export default new GraphQLObjectType({
+module.exports = new GraphQLObjectType({
     name: 'language',
     fields () {
         return {

@@ -120,30 +120,6 @@ module.exports = function(sequelize, DataTypes) {
             validate: {
                 notEmpty: false
             }
-        },
-        countryDescription: {
-            type: DataTypes.STRING,
-            validate: {
-                notEmpty: false
-            }
-        },
-        county: {
-            type: DataTypes.STRING,
-            validate: {
-                notEmpty: false
-            }
-        },
-        sorRowId: {
-            type: DataTypes.BIGINT,
-            validate: {
-                notEmpty: false
-            }
-        },
-        sorSystemId: {
-            type: DataTypes.BIGINT,
-            validate: {
-                notEmpty: false
-            }
         }
     }, {
         timestamps: false,
@@ -154,28 +130,28 @@ module.exports = function(sequelize, DataTypes) {
     Office.associate = function(models) {
 
         // Has many phones
-        // models.office.hasMany(models.phone, {
-        //   foreignKey: "relatedEntityId",
-        //   sourceKey: "officeId",
-        //   scope: {
-        //     relatedEntityType: 'Office'
-        //   }
-        // })
+        models.Office.hasMany(models.Phone, {
+          foreignKey: "relatedEntityId",
+          sourceKey: "officeId",
+          scope: {
+            relatedEntityType: 'Office'
+          }
+        })
 
         // Has many web sites
-        // models.office.hasMany(models.webSite, {
-        //     foreignKey: "relatedEntityId",
-        //     sourceKey: "officeId",
-        //     scope: {
-        //       relatedEntityType: 'Office'
-        //     }
-        //   })
+        models.Office.hasMany(models.WebSite, {
+            foreignKey: "relatedEntityId",
+            sourceKey: "officeId",
+            scope: {
+              relatedEntityType: 'Office'
+            }
+          })
 
-        // Has many officePersons
-        // models.office.hasMany(models.personOffice, {
-        //     foreignKey: "officeId",
-        //     sourceKey: "officeId"
-        //   })
+        // Has many rosters
+        models.Office.hasMany(models.Roster, {
+            foreignKey: "officeId",
+            sourceKey: "officeId"
+          })
     }
 
     return Office;

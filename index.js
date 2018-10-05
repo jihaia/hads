@@ -21,6 +21,5 @@ app.use('/graphql', GraphHTTP((request) => ({
   graphiql: true,
 })))
 
-console.log('HADS User', process.env.HADS_DB_USER)
 // Export Express handler
 module.exports.handler = serverless(app);

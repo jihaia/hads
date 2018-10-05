@@ -1,11 +1,9 @@
-import {
-    GraphQLObjectType,
-    GraphQLString
-} from 'graphql';
+const GraphQL = require('graphql')
+const GraphQLObjectType = GraphQL.GraphQLObjectType
+const GraphQLString = GraphQL.GraphQLString
 
-import models from '../../models/index.js';
 
-export default new GraphQLObjectType({
+module.exports = new GraphQLObjectType({
     name: 'phone',
     fields () {
         return {
@@ -31,6 +29,20 @@ export default new GraphQLObjectType({
                 }
             },
             primaryFlag: {
+                type: GraphQLString,
+                description: "Indicates if this is the primary phone number to the related entity",
+                resolve (phone) {
+                    return phone.primaryFlag;
+                }
+            },
+            publishFlag: {
+                type: GraphQLString,
+                description: "Lorem ipsum dolar sit",
+                resolve (phone) {
+                    return phone.publishFlag;
+                }
+            },
+            webMobileDirect: {
                 type: GraphQLString,
                 description: "Indicates if this is the primary phone number to the related entity",
                 resolve (phone) {

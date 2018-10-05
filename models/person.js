@@ -143,8 +143,8 @@ module.exports = function(sequelize, DataTypes) {
         freezeTableName: true
     });
 
-    person.associate = function(models) {
-        models.person.hasMany(models.phone, {
+    Person.associate = function(models) {
+        models.Person.hasMany(models.Phone, {
           foreignKey: "relatedEntityId",
           sourceKey: "personId",
           scope: {

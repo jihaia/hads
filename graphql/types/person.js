@@ -1,13 +1,11 @@
-import {
-    GraphQLObjectType,
-    GraphQLString,
-    GraphQLList
-} from 'graphql';
+const GraphQL = require('graphql')
+const GraphQLObjectType = GraphQL.GraphQLObjectType
+const GraphQLList = GraphQL.GraphQLList
+const GraphQLString = GraphQL.GraphQLString
 
-import models from '../../models/index.js';
-import PhoneType from './phone.js'
+const PhoneType = require('./phone.js')
 
-export default new GraphQLObjectType({
+module.exports = new GraphQLObjectType({
     name: 'person',
     fields () {
         return {

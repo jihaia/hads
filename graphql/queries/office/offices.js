@@ -3,7 +3,7 @@ const GraphQLList = GraphQL.GraphQLList
 const GraphQLString = GraphQL.GraphQLString
 const GraphQLInt = GraphQL.GraphQLInt
 
-const models = require('../../../models/index.js')
+const Models = require('../../../models/index.js')
 const OfficeType = require('../../types/office.js')
 // import SorterInput from '../../inputs/sorter.js';
 
@@ -43,6 +43,6 @@ module.exports = {
     delete args.search
 
     // Issue query and return the promise
-    return models.office.findAll({where: args, include: [], offset, limit })
+    return Models.Office.findAll({where: args, include: [], offset, limit })
   }
 };

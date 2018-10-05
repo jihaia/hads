@@ -19,35 +19,30 @@ module.exports = function(sequelize, DataTypes) {
         },
         relationshipType: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         relationshipCode: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         beginDate: {
             type: DataTypes.DATE,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         endDate: {
             type: DataTypes.DATE,
-            allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
         primaryFlag: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }

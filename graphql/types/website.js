@@ -20,13 +20,6 @@ module.exports = new GraphQLObjectType({
                     return webSite.typeCode;
                 }
             },
-            description: {
-                type: GraphQLString,
-                description: "The full telewebSite number",
-                resolve (webSite) {
-                    return webSite.description;
-                }
-            },
             webAddress: {
                 type: GraphQLString,
                 webAddress: "The full telewebSite number",
@@ -35,6 +28,20 @@ module.exports = new GraphQLObjectType({
                 }
             },
             primaryFlag: {
+                type: GraphQLString,
+                description: "Indicates if this is the primary phone number to the related entity",
+                resolve (webSite) {
+                    return webSite.primaryFlag;
+                }
+            },
+            publishFlag: {
+                type: GraphQLString,
+                description: "Lorem ipsum dolar sit",
+                resolve (webSite) {
+                    return webSite.publishFlag;
+                }
+            },
+            webMobileDirect: {
                 type: GraphQLString,
                 description: "Indicates if this is the primary webSite number to the related entity",
                 resolve (webSite) {

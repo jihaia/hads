@@ -5,7 +5,7 @@ const GraphQLString = GraphQL.GraphQLString
 
 // import models from '../../models/index.js';
 const PhoneType = require('./phone.js')
-// const WebSiteType = require('./website.js')
+const WebSiteType = require('./website.js')
 // const RosterType = require('./roster.js')
 
 module.exports = new GraphQLObjectType({
@@ -95,14 +95,14 @@ module.exports = new GraphQLObjectType({
                 resolve(office) {
                     return office.getPhones();
                 }
+            },
+            webSites: {
+                type: new GraphQLList(WebSiteType),
+                description: "The list of registered websites",
+                resolve(office) {
+                    return office.getWebSites();
+                }
             }//,
-            // webSites: {
-            //     type: new GraphQLList(WebSiteType),
-            //     description: "The list of registered websites",
-            //     resolve(office) {
-            //         return office.getWebSites();
-            //     }
-            // },
             // rosters: {
             //     type: new GraphQLList(RosterType),
             //     description: "The list of related personOffices",

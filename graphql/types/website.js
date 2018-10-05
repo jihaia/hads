@@ -24,7 +24,7 @@ module.exports = new GraphQLObjectType({
                 type: GraphQLString,
                 webAddress: "The full telewebSite number",
                 resolve (webSite) {
-                    return webSite.description;
+                    return webSite.webAddress;
                 }
             },
             primaryFlag: {

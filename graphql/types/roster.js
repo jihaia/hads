@@ -3,7 +3,7 @@ const GraphQLObjectType = GraphQL.GraphQLObjectType
 const GraphQLString = GraphQL.GraphQLString
 
 const PersonType = require('./person.js')
-const OfficeType = require('./office.js')
+// const OfficeType = require('./office.js')
 
 module.exports = new GraphQLObjectType({
     name: 'roster',
@@ -50,14 +50,14 @@ module.exports = new GraphQLObjectType({
                 resolve (roster) {
                     return roster.getPerson();
                 }
-            },
-            office: {
-                type: OfficeType,
-                description: "the associated office",
-                resolve (roster) {
-                    return roster.getOffice();
-                }
             }
+            // office: {
+            //     type: OfficeType,
+            //     description: "the associated office",
+            //     resolve (roster) {
+            //         return roster.getOffice();
+            //     }
+            // }
         };
     }
 });

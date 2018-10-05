@@ -3,7 +3,8 @@ module.exports = function(sequelize, DataTypes) {
     var Roster = sequelize.define('Roster', {
 
         rosterId: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+            primaryKey: true
         },
         personId: {
             type: DataTypes.STRING,

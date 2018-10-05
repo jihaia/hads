@@ -7,70 +7,58 @@ module.exports = function(sequelize, DataTypes) {
             primaryKey: true
         },
         masterCustomerId: {
-            type: DataTypes.STRING,
-            autoIncrement: false,
-            primaryKey: false,
-            field: 'masterCustomerId'
+            type: DataTypes.STRING
         },
         subCustomerId: {
             type: DataTypes.STRING,
-            allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
         legacyId: {
             type: DataTypes.STRING,
-            allowNull: false,
             validate: {
                 notEmpty: false
             }
         },
         firstName: {
             type: DataTypes.STRING,
-            allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
         middleName: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         lastName: {
             type: DataTypes.STRING,
-            allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
         namePrefix: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         nameSuffix: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         nickname: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         maidenName: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
@@ -84,56 +72,36 @@ module.exports = function(sequelize, DataTypes) {
         },
         joinDate: {
             type: DataTypes.DATE,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
-        firstYearLicensed: {
+        firstYearLicense: {
             type: DataTypes.DECIMAL,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         status: {
             type: DataTypes.STRING,
-            allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
         photoURL: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         biography: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         billDue: {
             type: DataTypes.STRING,
-            allowNull: true,
-            validate: {
-                notEmpty: false
-            }
-        },
-        sorRowId: {
-            type: DataTypes.BIGINT,
-            allowNull: true,
-            validate: {
-                notEmpty: false
-            }
-        },
-        sorRowId: {
-            type: DataTypes.BIGINT,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }

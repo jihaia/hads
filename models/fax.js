@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
                 notEmpty: true
             }
         },
-        faxType: {
+        typeCode: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: false

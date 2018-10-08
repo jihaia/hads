@@ -2,9 +2,9 @@
 
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        return queryInterface.createTable('Fax', {
+        return queryInterface.createTable('OptIn', {
 
-            faxId: {
+            optInId: {
                 type: Sequelize.STRING(36),
                 autoIncrement: false,
                 primaryKey: true
@@ -25,29 +25,41 @@ module.exports = {
                 type: Sequelize.STRING(36),
                 allowNull: false
             },
-            typeCode: {
+            optInCode: {
                 type: Sequelize.STRING(24),
-                allowNull: true
-            },
-            faxNumber: {
-                type: Sequelize.STRING(255),
                 allowNull: false
             },
-            primaryFlag: {
+            optInName: {
+                type: Sequelize.STRING(24),
+                allowNull: false
+            },
+            optInSubName: {
+                type: Sequelize.STRING(24),
+                allowNull: false
+            },
+            description: {
+                type: Sequelize.STRING(50),
+                allowNull: true
+            },
+            optedInFlag: {
                 type: Sequelize.STRING(1),
                 allowNull: true
             },
-            publishFlag: {
-                type: Sequelize.STRING(1),
+            optedInDate: {
+                type: Sequelize.DATETIME,
                 allowNull: true
             },
-            webMobileDirect: {
-                type: Sequelize.STRING(1),
+            optedOutDate: {
+                type: Sequelize.DATETIME,
+                allowNull: true
+            },
+            optInExpirationDate: {
+                type: Sequelize.DATETIME,
                 allowNull: true
             }
         });
     },
     down: (queryInterface, Sequelize) => {
-        return queryInterface.dropTable('Fax');
+        return queryInterface.dropTable('OptIn');
     }
 };

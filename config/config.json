@@ -1,9 +1,9 @@
 {
     "development": {
-      "username": "admin",
-      "password": "Iroadm1n",
-      "database": "db",
-      "host": "hadsdbi.c20u3akjtrjp.us-east-1.rds.amazonaws.com",
+      "username": "root",
+      "password": null,
+      "database": "hads_dev",
+      "host": "localhost",
       "dialect": "mysql"
     }
 }

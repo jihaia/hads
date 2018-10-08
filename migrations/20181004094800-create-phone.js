@@ -25,7 +25,7 @@ module.exports = {
                 type: Sequelize.STRING(36),
                 allowNull: false
             },
-            typeCode: {
+            phoneType: {
                 type: Sequelize.STRING(24),
                 allowNull: true
             },

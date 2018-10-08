@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
                 notEmpty: true
             }
         },
-        phoneType: {
+        typeCode: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: false

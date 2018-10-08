@@ -46,6 +46,18 @@ module.exports = function(sequelize, DataTypes) {
             validate: {
                 notEmpty: true
             }
+        },
+        beginDate: {
+            type: DataTypes.DATETIME,
+            validate: {
+                notEmpty: false
+            }
+        },
+        endDate: {
+            type: DataTypes.DATETIME,
+            validate: {
+                notEmpty: false
+            }
         }
     }, {
         timestamps: false,

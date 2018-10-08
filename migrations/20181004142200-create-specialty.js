@@ -2,9 +2,9 @@
 
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        return queryInterface.createTable('Fax', {
+        return queryInterface.createTable('Specialty', {
 
-            faxId: {
+            specialtyId: {
                 type: Sequelize.STRING(36),
                 autoIncrement: false,
                 primaryKey: true
@@ -25,29 +25,25 @@ module.exports = {
                 type: Sequelize.STRING(36),
                 allowNull: false
             },
-            typeCode: {
+            specialty: {
                 type: Sequelize.STRING(24),
                 allowNull: true
             },
-            faxNumber: {
-                type: Sequelize.STRING(255),
+            subSpecialty: {
+                type: Sequelize.STRING(24),
                 allowNull: false
             },
-            primaryFlag: {
-                type: Sequelize.STRING(1),
+            beginDate: {
+                type: Sequelize.DATE,
                 allowNull: true
             },
-            publishFlag: {
-                type: Sequelize.STRING(1),
-                allowNull: true
-            },
-            webMobileDirect: {
-                type: Sequelize.STRING(1),
+            endDate: {
+                type: Sequelize.DATE,
                 allowNull: true
             }
         });
     },
     down: (queryInterface, Sequelize) => {
-        return queryInterface.dropTable('Fax');
+        return queryInterface.dropTable('Specialty');
     }
 };

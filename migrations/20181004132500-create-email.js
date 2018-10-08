@@ -2,9 +2,9 @@
 
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        return queryInterface.createTable('Fax', {
+        return queryInterface.createTable('Email', {
 
-            faxId: {
+            emailId: {
                 type: Sequelize.STRING(36),
                 autoIncrement: false,
                 primaryKey: true
@@ -25,11 +25,11 @@ module.exports = {
                 type: Sequelize.STRING(36),
                 allowNull: false
             },
-            typeCode: {
+            emailtype: {
                 type: Sequelize.STRING(24),
                 allowNull: true
             },
-            faxNumber: {
+            emailAddress: {
                 type: Sequelize.STRING(255),
                 allowNull: false
             },
@@ -48,6 +48,6 @@ module.exports = {
         });
     },
     down: (queryInterface, Sequelize) => {
-        return queryInterface.dropTable('Fax');
+        return queryInterface.dropTable('Email');
     }
 };

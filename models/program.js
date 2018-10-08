@@ -1,45 +1,40 @@
 module.exports = function(sequelize, DataTypes) {
-    var Award = sequelize.define('Award', {
+    var Program = sequelize.define('Program', {
 
-        awardId: {
+        programId: {
             type: DataTypes.STRING,
             autoIncrement: false,
             primaryKey: true
         },
-        masterCustomerId: {
-            type: DataTypes.STRING,
-            validate: {
-                notEmpty: false
-            }
-        },
-        subCustomerId: {
-            type: DataTypes.DECIMAL,
-            validate: {
-                notEmpty: false
-            }
-        },
-        relatedEntityType: {
+        programCode: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: true
             }
         },
-        relatedEntityId: {
+        programName: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: true
             }
         },
-        programId: {
-            type: DataTypes.STRING,
+        programYear: {
+            type: DataTypes.INTEGER,
             validate: {
                 notEmpty: true
             }
         },
-        awardDate: {
-            type: DataTypes.DATETIME,
+        programDate: {
+            type: DataTypes.DATE,
             validate: {
-                notEmpty: false
+                notEmpty: true
+            }
+        },
+        activeFlag: {
+            type: DataTypes.STRING,
+            defaultValue: '1',
+            validate: {
+                notEmpty: true
             }
         }
     }, {
@@ -47,5 +42,5 @@ module.exports = function(sequelize, DataTypes) {
         freezeTableName: true
     });
 
-    return Award;
+    return Program;
 }

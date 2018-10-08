@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
                 notEmpty: true
             }
         },
-        emailAddress: {
+        typeCode: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: false
@@ -39,7 +39,7 @@ module.exports = function(sequelize, DataTypes) {
         emailAddress: {
             type: DataTypes.STRING,
             validate: {
-                notEmpty: true
+                notEmpty: false
             }
         },
         primaryFlag: {

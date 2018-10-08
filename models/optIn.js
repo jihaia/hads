@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-    var Phone = sequelize.define('Phone', {
+    var OptIn = sequelize.define('OptIn', {
 
-        phoneId: {
+        optInId: {
             type: DataTypes.STRING,
             autoIncrement: false,
             primaryKey: true
@@ -30,37 +30,53 @@ module.exports = function(sequelize, DataTypes) {
                 notEmpty: true
             }
         },
-        phoneType: {
+        optInType: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: false
             }
         },
-        phoneNumber: {
+        optInName: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: true
             }
         },
-        primaryFlag: {
+        optInSubName: {
             type: DataTypes.STRING,
-            defaultValue: "0",
             validate: {
                 notEmpty: true
             }
         },
-        publishFlag: {
+        description: {
+            type: DataTypes.STRING,
+            validate: {
+                notEmpty: true
+            }
+        },
+        optedInFlag: {
             type: DataTypes.STRING,
             defaultValue: "1",
             validate: {
                 notEmpty: true
             }
         },
-        webMobileDirectFlag: {
-            type: DataTypes.STRING,
-            defaultValue: "1",
+        optedInDate: {
+            type: DataTypes.DATETIME,
             validate: {
-                notEmpty: true
+                notEmpty: false
+            }
+        },
+        optedInExpirationDate: {
+            type: DataTypes.DATETIME,
+            validate: {
+                notEmpty: false
+            }
+        },
+        optedOutDate: {
+            type: DataTypes.DATETIME,
+            validate: {
+                notEmpty: false
             }
         }
     }, {
@@ -68,5 +84,5 @@ module.exports = function(sequelize, DataTypes) {
         freezeTableName: true
     });
 
-    return Phone;
+    return OptIn;
 }

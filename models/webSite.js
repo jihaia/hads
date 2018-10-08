@@ -3,6 +3,7 @@ module.exports = function(sequelize, DataTypes) {
 
         webSiteId: {
             type: DataTypes.STRING,
+            autoIncrement: false,
             primaryKey: true
         },
         masterCustomerId: {
@@ -12,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         subCustomerId: {
-            type: DataTypes.STRING,
+            type: DataTypes.DECIMAL,
             validate: {
                 notEmpty: false
             }
@@ -29,13 +30,13 @@ module.exports = function(sequelize, DataTypes) {
                 notEmpty: true
             }
         },
-        typeCode: {
+        webSiteType: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: false
             }
         },
-        webAddress: {
+        webSiteAddress: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: true
@@ -43,14 +44,23 @@ module.exports = function(sequelize, DataTypes) {
         },
         primaryFlag: {
             type: DataTypes.STRING,
+            defaultValue: "0",
             validate: {
-                notEmpty: false
+                notEmpty: true
             }
         },
         publishFlag: {
             type: DataTypes.STRING,
+            defaultValue: "1",
             validate: {
-                notEmpty: false
+                notEmpty: true
+            }
+        },
+        webMobileDirectFlag: {
+            type: DataTypes.STRING,
+            defaultValue: "1",
+            validate: {
+                notEmpty: true
             }
         }
     }, {

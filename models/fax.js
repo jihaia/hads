@@ -8,58 +8,59 @@ module.exports = function(sequelize, DataTypes) {
         },
         masterCustomerId: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         subCustomerId: {
-            type: DataTypes.STRING,
-            allowNull: true,
+            type: DataTypes.DECIMAL,
             validate: {
                 notEmpty: false
             }
         },
         relatedEntityType: {
             type: DataTypes.STRING,
-            allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
         relatedEntityId: {
             type: DataTypes.STRING,
-            allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
-        typeCode: {
+        faxType: {
             type: DataTypes.STRING,
-            allowNull: true,
             validate: {
                 notEmpty: false
             }
         },
         faxNumber: {
             type: DataTypes.STRING,
-            allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
         primaryFlag: {
             type: DataTypes.STRING,
-            allowNull: true,
+            defaultValue: "0",
             validate: {
-                notEmpty: false
+                notEmpty: true
             }
         },
         publishFlag: {
             type: DataTypes.STRING,
-            allowNull: true,
+            defaultValue: "1",
             validate: {
-                notEmpty: false
+                notEmpty: true
+            }
+        },
+        webMobileDirectFlag: {
+            type: DataTypes.STRING,
+            defaultValue: "1",
+            validate: {
+                notEmpty: true
             }
         }
     }, {

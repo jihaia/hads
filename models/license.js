@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-    var Phone = sequelize.define('Phone', {
+    var License = sequelize.define('License', {
 
-        phoneId: {
+        licenseId: {
             type: DataTypes.STRING,
             autoIncrement: false,
             primaryKey: true
@@ -30,37 +30,40 @@ module.exports = function(sequelize, DataTypes) {
                 notEmpty: true
             }
         },
-        phoneType: {
+        licenseType: {
             type: DataTypes.STRING,
+            validate: {
+                notEmpty: true
+            }
+        },
+        licenseNo: {
+            type: DataTypes.STRING,
+            validate: {
+                notEmpty: true
+            }
+        },
+        country: {
+            type: DataTypes.STRING,
+            validate: {
+                notEmpty: true
+            }
+        },
+        state: {
+            type: DataTypes.STRING,
+            validate: {
+                notEmpty: true
+            }
+        },
+        beginDate: {
+            type: DataTypes.DATETIME,
             validate: {
                 notEmpty: false
             }
         },
-        phoneNumber: {
-            type: DataTypes.STRING,
+        endDate: {
+            type: DataTypes.DATETIME,
             validate: {
-                notEmpty: true
-            }
-        },
-        primaryFlag: {
-            type: DataTypes.STRING,
-            defaultValue: "0",
-            validate: {
-                notEmpty: true
-            }
-        },
-        publishFlag: {
-            type: DataTypes.STRING,
-            defaultValue: "1",
-            validate: {
-                notEmpty: true
-            }
-        },
-        webMobileDirectFlag: {
-            type: DataTypes.STRING,
-            defaultValue: "1",
-            validate: {
-                notEmpty: true
+                notEmpty: false
             }
         }
     }, {
@@ -68,5 +71,5 @@ module.exports = function(sequelize, DataTypes) {
         freezeTableName: true
     });
 
-    return Phone;
+    return License;
 }

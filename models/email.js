@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-    var Phone = sequelize.define('Phone', {
-
-        phoneId: {
+    var Email = sequelize.define('Email', {
+        
+        emailId: {
             type: DataTypes.STRING,
             autoIncrement: false,
             primaryKey: true
@@ -30,13 +30,13 @@ module.exports = function(sequelize, DataTypes) {
                 notEmpty: true
             }
         },
-        phoneType: {
+        emailAddress: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: false
             }
         },
-        phoneNumber: {
+        emailAddress: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: true
@@ -68,5 +68,5 @@ module.exports = function(sequelize, DataTypes) {
         freezeTableName: true
     });
 
-    return Phone;
+    return Email;
 }

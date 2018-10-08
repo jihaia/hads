@@ -105,6 +105,18 @@ module.exports = function(sequelize, DataTypes) {
             validate: {
                 notEmpty: false
             }
+        },
+        birthDate: {
+            type: DataTypes.DATE,
+            validate: {
+                notEmpty: false
+            }
+        },
+        gender: {
+            type: DataTypes.STRING,
+            validate: {
+                notEmpty: false
+            }
         }
     }, {
         timestamps: false,

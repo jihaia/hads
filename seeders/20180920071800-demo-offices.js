@@ -21,7 +21,7 @@ module.exports = {
         city: faker.address.city(),
         state: faker.address.stateAbbr(),
         postalCode: faker.address.zipCode(),
-        countryCode: 'US'
+        country: 'US'
       }
       offices.push(office)
     }

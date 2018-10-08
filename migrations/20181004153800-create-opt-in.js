@@ -46,15 +46,15 @@ module.exports = {
                 allowNull: true
             },
             optedInDate: {
-                type: Sequelize.DATETIME,
+                type: Sequelize.DATE,
                 allowNull: true
             },
             optedOutDate: {
-                type: Sequelize.DATETIME,
+                type: Sequelize.DATE,
                 allowNull: true
             },
             optInExpirationDate: {
-                type: Sequelize.DATETIME,
+                type: Sequelize.DATE,
                 allowNull: true
             }
         });

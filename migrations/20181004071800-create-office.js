@@ -82,8 +82,8 @@ module.exports = {
         type: Sequelize.STRING(15),
         allowNull: true
       },
-      countryCode: {
-        type: Sequelize.STRING(5),
+      country: {
+        type: Sequelize.STRING(24),
         allowNull: true
       },
       county: {

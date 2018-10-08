@@ -37,7 +37,7 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         awardDate: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             validate: {
                 notEmpty: false
             }

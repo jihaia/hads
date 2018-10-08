@@ -115,7 +115,7 @@ module.exports = function(sequelize, DataTypes) {
                 notEmpty: false
             }
         },
-        countryCode: {
+        country: {
             type: DataTypes.STRING,
             validate: {
                 notEmpty: false

@@ -31,7 +31,7 @@ module.exports = {
     },
     endDate: {
         type: Sequelize.DATE,
-        allowNull: false
+        allowNull: true
     },
     primaryFlag: {
         type: Sequelize.STRING(1),

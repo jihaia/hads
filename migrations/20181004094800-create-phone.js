@@ -11,7 +11,7 @@ module.exports = {
             },
             masterCustomerId: {
                 type: Sequelize.STRING(12),
-                autoIncrement: false
+                allowNull: true
             },
             subCustomerId: {
                 type: Sequelize.DECIMAL(3),
@@ -25,7 +25,7 @@ module.exports = {
                 type: Sequelize.STRING(36),
                 allowNull: false
             },
-            phoneType: {
+            typeCode: {
                 type: Sequelize.STRING(24),
                 allowNull: true
             },
@@ -41,7 +41,7 @@ module.exports = {
                 type: Sequelize.STRING(1),
                 allowNull: true
             },
-            webMobileDirect: {
+            webMobileDirectFlag: {
                 type: Sequelize.STRING(1),
                 allowNull: true
             }

@@ -43,13 +43,13 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         beginDate: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             validate: {
                 notEmpty: false
             }
         },
         endDate: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             validate: {
                 notEmpty: false
             }

@@ -11,7 +11,7 @@ module.exports = {
             },
             masterCustomerId: {
                 type: Sequelize.STRING(12),
-                autoIncrement: false
+                allowNull: true
             },
             subCustomerId: {
                 type: Sequelize.DECIMAL(3),

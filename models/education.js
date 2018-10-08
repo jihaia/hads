@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Fax = sequelize.define('Education', {
+    var Education = sequelize.define('Education', {
 
         educationId: {
             type: DataTypes.STRING,
@@ -43,13 +43,13 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         beginDate: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             validate: {
                 notEmpty: false
             }
         },
         endDate: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             validate: {
                 notEmpty: false
             }

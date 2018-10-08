@@ -11,7 +11,7 @@ module.exports = {
             },
             masterCustomerId: {
                 type: Sequelize.STRING(12),
-                autoIncrement: false
+                allowNull: true
             },
             subCustomerId: {
                 type: Sequelize.DECIMAL(3),
@@ -27,7 +27,7 @@ module.exports = {
             },
             programId: {
                 type: Sequelize.STRING(36),
-                allowNull: true
+                allowNull: false
             },
             awardDate: {
                 type: Sequelize.DATE,

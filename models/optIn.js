@@ -62,19 +62,19 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
         optedInDate: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             validate: {
                 notEmpty: false
             }
         },
         optedInExpirationDate: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             validate: {
                 notEmpty: false
             }
         },
         optedOutDate: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             validate: {
                 notEmpty: false
             }

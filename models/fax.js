@@ -44,23 +44,20 @@ module.exports = function(sequelize, DataTypes) {
         },
         primaryFlag: {
             type: DataTypes.STRING,
-            defaultValue: "0",
             validate: {
-                notEmpty: true
+                notEmpty: false
             }
         },
         publishFlag: {
             type: DataTypes.STRING,
-            defaultValue: "1",
             validate: {
-                notEmpty: true
+                notEmpty: false
             }
         },
         webMobileDirectFlag: {
             type: DataTypes.STRING,
-            defaultValue: "1",
             validate: {
-                notEmpty: true
+                notEmpty: false
             }
         }
     }, {

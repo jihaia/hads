@@ -27,7 +27,7 @@ module.exports = {
             },
             activeFlag: {
                 type: Sequelize.STRING(1),
-                allowNull: false
+                allowNull: true
             },
         });
     },

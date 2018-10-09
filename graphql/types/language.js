@@ -13,11 +13,11 @@ module.exports = new GraphQLObjectType({
                     return language.languageId;
                 }
             },
-            language: {
+            languageCode: {
                 type: GraphQLString,
                 description: "The name of the language",
                 resolve (language) {
-                    return language.language;
+                    return language.languageCode;
                 }
             },
             sequence: {

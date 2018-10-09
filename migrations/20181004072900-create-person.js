@@ -77,6 +77,14 @@ module.exports = {
       billDue: {
         type: Sequelize.INTEGER(11),
         allowNull: true
+      },
+      gender: {
+        type: Sequelize.STRING(24),
+        allowNull: true
+      },
+      birthDate: {
+        type: Sequelize.DATE,
+        allowNull: true
       }
     });
   },

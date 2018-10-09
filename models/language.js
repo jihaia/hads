@@ -19,21 +19,7 @@ module.exports = function(sequelize, DataTypes) {
                 notEmpty: true
             }
         },
-        relatedEntityType: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                notEmpty: true
-            }
-        },
-        relatedEntityId: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                notEmpty: true
-            }
-        },
-        language: {
+        languageCode: {
             type: DataTypes.STRING,
             allowNull: true,
             validate: {
@@ -45,18 +31,6 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
             validate: {
                 notEmpty: true
-            }
-        },
-        beginDate: {
-            type: DataTypes.DATE,
-            validate: {
-                notEmpty: false
-            }
-        },
-        endDate: {
-            type: DataTypes.DATE,
-            validate: {
-                notEmpty: false
             }
         }
     }, {
